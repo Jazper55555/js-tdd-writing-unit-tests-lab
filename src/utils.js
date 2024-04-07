@@ -1,1 +1,8 @@
-// Your code here
+export function isPalindrome(word) {
+    const re = /[\W_]/g
+
+    const lowercaseWord = word.toLowerCase().replace(re, '')
+    const reverseWord = lowercaseWord.split('').reverse().join('')
+
+    return reverseWord === lowercaseWord
+}
