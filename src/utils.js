@@ -4,5 +4,9 @@ export function isPalindrome(word) {
     const lowercaseWord = word.toLowerCase().replace(re, '')
     const reverseWord = lowercaseWord.split('').reverse().join('')
 
-    return reverseWord === lowercaseWord
+    if (word === '') {
+        return false
+    }   else if (lowercaseWord === reverseWord) {
+        return true
+    }
 }
